@@ -1,8 +1,4 @@
-# query-entity-core
-
-
-```sql
-          SELECT [tipoparte].[CodigoTipoParte], [tipoparte].[Descricao], [classes].[CodigoClasse], [tipoparte].[CodigoTipoParte] AS [CodigoTipoParte0], [classes].[Tipo], CASE
+﻿          SELECT [tipoparte].[CodigoTipoParte], [tipoparte].[Descricao], [classes].[CodigoClasse], [tipoparte].[CodigoTipoParte] AS [CodigoTipoParte0], [classes].[Tipo], CASE
     WHEN [classes].[CodigoTipoParte] = [tipoparte].[CodigoTipoParte]
     THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
 END, CASE
@@ -41,4 +37,3 @@ LEFT JOIN [TipoParte] AS [tipoparte] ON 1 = 1
                     OFFSET @__p_1 ROWS
                 ) AS[t3]
             ) AS[t4] ON 1 = 1',N'@__p_0 int, @__p_1 int',@__p_0=15,@__p_1=0
-```
